@@ -34,6 +34,7 @@ def call(String name, String fname = null) {
 def getComputer(name){
 
     for(computer in Jenkins.getInstance().getComputers()){ 
+        println computer.getDisplayName()
         if(computer.getDisplayName() == name){
             return computer.getChannel()
         }
