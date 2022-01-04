@@ -32,12 +32,8 @@ def call(String name, String fname = null) {
 
 
 def getComputer(name){
-    println name
     for(computer in Jenkins.getInstance().getComputers()){ 
-        println computer.getDisplayName()
-        if(computer.getDisplayName() == name){
-            return computer.getChannel()
-        }
+        return computer.getChannel()
     }
 
     error "Cannot find computer for file parameter workaround"
