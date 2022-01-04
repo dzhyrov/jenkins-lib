@@ -33,7 +33,8 @@ def call(String name, String fname = null) {
 
 def getComputer(name){
     for(computer in Jenkins.getInstance().getComputers()){ 
-        println computer.getChannel()
+        println "Name of the node used: " + computer.getDisplayName()
+
         return computer.getChannel()
     }
 
