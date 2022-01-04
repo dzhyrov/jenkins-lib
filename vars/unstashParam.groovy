@@ -33,7 +33,7 @@ def call(String name, String fname = null) {
 
 def getComputer(name){
     for(computer in Jenkins.getInstance().getComputers()){ 
-        printlf computer.getChannel()
+        println computer.getChannel()
         return computer.getChannel()
     }
 
